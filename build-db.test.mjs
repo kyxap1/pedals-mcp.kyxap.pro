@@ -16,7 +16,7 @@ const FIXTURES = {
   'source-audio-collider': 'rowspan enumerations',
   'boss-rc-5': 'rowspan, colspan, nested .mini tables',
   'source-audio-eq2': 'the 96-row table that must be stubbed',
-  'disaster-area-designs-dpc-micro-ns': 'th scope="row" label columns',
+  'disaster-area-designs-dpc-micro-gen3': 'th scope="row" label columns',
   'boss-ge-7': 'the trivial case',
 };
 
@@ -79,7 +79,7 @@ for (const [slug, why] of Object.entries(FIXTURES)) {
 // The defects that motivated the design, pinned to the rows that exposed them.
 
 test('dpc.micro: a th scope="row" label column survives', () => {
-  const t = pages['disaster-area-designs-dpc-micro-ns'].tables.find((x) =>
+  const t = pages['disaster-area-designs-dpc-micro-gen3'].tables.find((x) =>
     x.headers.includes('Chain ID')
   );
   assert.ok(t, 'Chain ID table not found');
