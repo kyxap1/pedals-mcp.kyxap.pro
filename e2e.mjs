@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 // The one check on the Worker: every tool answered from a real loaded database.
 //
-//   npx wrangler dev --local --var DB_WRITE_TOKEN:test
-//   MCP_URL=http://127.0.0.1:8787 DB_WRITE_TOKEN=test node load.mjs <manuals-root>
-//   MCP_URL=http://127.0.0.1:8787 node e2e.mjs
+//   ./e2e-local.sh <manuals-root>
 //
 // Usage: MCP_URL=… node e2e.mjs
 

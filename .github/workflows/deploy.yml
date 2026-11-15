@@ -42,6 +42,11 @@ jobs:
         env:
           PEDALS_ROOT: manuals
 
+      # npm test covers the parser only. Every tool runs here against a local
+      # Worker on a freshly loaded D1, so an update that breaks the Worker
+      # fails before it reaches production.
+      - run: ./e2e-local.sh manuals
+
       # Uploads the script and writes this Worker's own subdomain settings;
       # both are in reach of a token scoped to this Worker alone. It prints
       # "No targets deployed" because no route is declared — see wrangler.toml.

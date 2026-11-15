@@ -1,3 +1,4 @@
 node_modules/
 dist/
 manuals/
+wrangler-dev.log
